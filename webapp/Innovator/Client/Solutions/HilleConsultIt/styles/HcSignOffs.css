@@ -1,0 +1,44 @@
+body {
+    background-color:white;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+label, legend {
+    font-weight: bold;
+}
+
+input, select {
+    margin: 10px;
+}
+
+fieldset.isSelected {
+    background-color: khaki;
+}
+
+.top-container {
+    min-height: 24px;
+    margin-bottom: 0.3em;
+    width: 100%;
+    padding: 6px 0 0 6px;
+    box-shadow: 0 0 0 1px #555 inset;
+    border-bottom: 4px solid rgb(137, 89, 171);
+}
+
+button.menu-button {
+    margin-bottom: 6px;
+}
+
+.progress-wrap {
+    padding: 0.3em;
+}
+
+h2 {
+    margin-bottom: 0.3em;
+}
+
+.resultMessage {
+    color: red;
+}

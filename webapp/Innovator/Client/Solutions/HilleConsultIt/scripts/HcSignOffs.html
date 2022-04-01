@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>SignOffs</title>
+		<meta name="description" content="Aras SignOffs">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../styles/HcSignOffs.css">
+		<script src="http://www.myersdaily.org/joseph/javascript/md5.js"></script> <!-- TODO: Replace with local/Aras variant-->
+		<!-- <script type="text/javascript" src="../../javascript/md5.js"></script> -->
+	</head>
+	<body>
+		<div class="top-container">
+			<button id="refresh-button" class="menu-button"><img src="../../../images/Refresh.svg" alt=""  width="24" height="24"></button>
+		</div>
+		<h2>SignOffs</h2>
+		
+		<template id="signoffTemplate">
+			<fieldset id="" class="signoff">
+				<legend>Sign Off</legend>
+				<div class="signoff_description"></div>
+				
+				<label for="vote-options">Action</label>
+				<select class="voteOptions" name="vote-options" >
+					<option value="">--Please choose an option--</option>
+				</select>
+				<br>
+				<label for="comments">Comments</label>
+				<textarea  name="comments" rows="3" cols="80"></textarea>
+				<div class="resultMessage"></div>
+			</fieldset>
+		</template>
+		
+		<div id="signoffList">
+			
+		</div>
+		<fieldset>
+			<legend>Authentication</legend>
+			<label for="arasPassword">Password</label>
+			<!-- Avoid browsers suggesting autocomplete, hence the readonly trick  -->
+			<input type="password" name="arasPassword" id="pwd" autocomplete="new-password" readonly onclick="this.removeAttribute('readonly');">
+		  </fieldset>
+		  
+		 <div id="progress-wrapper" style="display: none;" class="progress-wrap">
+			<label for="vote-progress">Signoff progress:</label>
+			<progress id="vote-progress" value="0" max="100"></progress>
+		</div>
+		<button id="completeButton">Complete</button>
+
+	
+		<!--<script src="../javascript/HcSignOffCtrl.js" async></script>-->
+		<script src="../javascript/HcSignOffArasApi.js" async ></script>
+		<script src="../javascript/HcSignoff.js" async defer></script>
+		
+	</body>
+</html>
